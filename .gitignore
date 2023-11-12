@@ -1,0 +1,11 @@
+# vault
+cluster-keys.json
+
+# terraform
+.terraform/
+.terraform.lock.hcl
+json
+plan
+terraform.tfstate
+terraform.tfstate.backup
+vars.auto.tfvars
