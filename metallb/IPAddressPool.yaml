@@ -1,0 +1,10 @@
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: picluster
+  namespace: metallb
+spec:
+  addresses:
+  # - 10.19.92.100-10.19.92.103
+  - 10.19.92.100/30
