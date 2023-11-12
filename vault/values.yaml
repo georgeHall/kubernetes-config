@@ -1,0 +1,5 @@
+server:
+  dataStorage:
+    storageClass: "nfs-client"
+  auditStorage:
+    storageClass: "nfs-client"
