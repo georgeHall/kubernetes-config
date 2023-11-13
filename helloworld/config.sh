@@ -27,4 +27,4 @@ kubectl create configmap hello-world --from-file index.html --namespace $namespa
 
 kubectl apply -f deployment.yaml --namespace $namespace
 kubectl apply -f service.yaml --namespace $namespace
-
+kubectl apply -f ingress.yaml --namespace $namespace
