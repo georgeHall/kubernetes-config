@@ -1,0 +1,18 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: mqtt
+  namespace: mqtt
+spec:
+  entryPoints:
+    - web
+  routes:
+  - kind: Rule
+    match: Host(`mqtt.gerh.co.uk`)
+    priority: 10
+    services:
+    - kind: Service
+      name: mqtt-web
+      namespace: mqtt
+      port: 9001

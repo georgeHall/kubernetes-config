@@ -11,3 +11,8 @@ helm repo update
 echo "Installing NFS Subdir external provisioner"
 helm upgrade --install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner -f ./nfs/values.yaml
 echo "Installed NFS Subdir external provisioner"
+
+namespace="traefik"
+kubectl apply --filename ./traefik/namespace.yaml
+helm upgrade --install traefik traefik/traefik -f ./traefik/values.yaml --namespace $namespace
+kubectl apply --filename ./traefik/dashboard.yaml --namespace $namespace
